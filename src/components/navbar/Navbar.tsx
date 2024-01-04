@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Image, Text } from "@chakra-ui/react";
 import NavbarList from "./NavbarList";
-
+import LogoOne from "../../../public/LogoOne.png";
 function Navbar() {
   return (
     <Box
@@ -9,11 +9,20 @@ function Navbar() {
       gridTemplateColumns="1fr 1fr"
       w={"full"}
       h={"20"}
-      bg={"teal"}
+      bg={"white"}
       rounded={"md"}
+      shadow={"lg"}
     >
       <Box>
-        <Image src="" alt="Katie"></Image>
+        <Image
+          src={LogoOne.src}
+          p={1}
+          position={"absolute"}
+          top="-24%"
+          w={"105px"}
+          h={"105px"}
+          alt="Katie"
+        ></Image>
       </Box>
       <Box>
         <NavbarList></NavbarList>
