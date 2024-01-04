@@ -1,9 +1,9 @@
-"use client"
-import React from 'react'
+"use client";
+import React from "react";
+import { Box } from "@chakra-ui/react";
+import Navbar from "@/components/navbar/Navbar";
 function App() {
-  return (
-    <div>App</div>
-  )
+  return <Navbar></Navbar>;
 }
 
-export default App
+export default App;
