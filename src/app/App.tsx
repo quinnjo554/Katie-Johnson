@@ -1,9 +1,13 @@
 "use client";
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import Navbar from "@/components/navbar/Navbar";
+import LandingPage from "@/page/Landing/LandingPage";
 function App() {
-  return <Navbar></Navbar>;
+  return (
+    <Box>
+      <LandingPage></LandingPage>
+    </Box>
+  );
 }
 
 export default App;

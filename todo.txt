@@ -1,0 +1,3 @@
+Navbar add a bar underneith active link 
+contacts- h1 text slides in and underline fades up
+

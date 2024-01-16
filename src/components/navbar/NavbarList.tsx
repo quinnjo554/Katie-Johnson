@@ -19,11 +19,14 @@ import {
 } from "@chakra-ui/react";
 import {} from "@chakra-ui/react";
 import Link from "next/link";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import React, { useEffect, useRef, useState } from "react";
 import { content } from "@/constants/navBarList";
 function DesktopNavbar() {
   return (
     <List
+      pos="absolute"
+      right={0}
       display={"flex"}
       textColor={"black"}
       fontSize={["small", "medium", "large", "large"]}
@@ -97,11 +100,11 @@ function MobileNavbar() {
         ref={btnRef}
         position="absolute"
         right={5}
-        top={3}
+        top={5}
         onClick={onOpen}
         as={Button}
       >
-        bur
+        <HamburgerIcon boxSize={6} />
       </MenuButton>
       <Drawer
         finalFocusRef={btnRef}

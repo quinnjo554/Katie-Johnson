@@ -1,5 +1,5 @@
 const STAR_SPEED = 0.2;
-const STAR_NUM = 2000;
+const STAR_NUM = 1000;
 export const startStarfieldAnimation = (
   canvasRef: React.RefObject<HTMLCanvasElement>
 ) => {

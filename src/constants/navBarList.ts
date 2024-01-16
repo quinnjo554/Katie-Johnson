@@ -4,3 +4,5 @@ export const content: string[] = [
   "Resources",
   "Advocacy Services",
 ];
+
+export const underLinedColor : string = "gold";
