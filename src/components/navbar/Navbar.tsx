@@ -7,6 +7,9 @@ import Link from "next/link";
 function Navbar() {
   return (
     <Box
+      pos={"sticky"}
+      top={"0"}
+      zIndex={"sticky"}
       display={"grid"}
       gridTemplateColumns="1fr 1fr"
       w={"full"}
