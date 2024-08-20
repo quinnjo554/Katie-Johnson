@@ -112,7 +112,7 @@ function ContactsHero() {
           <Flex direction={isLargerThan768 ? "row" : "column"} align="center">
             <Box flex={1} mb={isLargerThan768 ? 0 : 8}>
               <Heading color="white" mb={4}>
-                Let's Work Together
+                Lets Work Together
               </Heading>
               <Text color="white" fontSize="lg">
                 Academic Pathways is committed to helping neurodiverse students succeed. 

@@ -47,7 +47,6 @@ function LandingPage() {
         position="relative"
         height="400vh" // Adjust based on your content
       >
-        {/* Background Image */}
         <MotionBox
           position="fixed"
           top="0"
@@ -82,9 +81,7 @@ function LandingPage() {
             h="100%"
           />
         </MotionBox>
-        {/* Content Sections */}
         <Box position="relative" zIndex="1">
-          {/* Hero Section */}
           <Box height="100vh" display="flex" alignItems="center" justifyContent="center">
             <Container maxW="container.xl">
               <MotionBox
@@ -116,7 +113,7 @@ function LandingPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
                 >
-                  Empowering neurodiverse students and educating school staff about dyslexia, ADHD, and more.
+                  Empowering neurodiverse students and educating school staff about dyslexia ADHD and more.
                 </MotionText>
                 <MotionBox
                   initial={{ opacity: 0, y: 20 }}
@@ -131,7 +128,6 @@ function LandingPage() {
             </Container>
           </Box>
 
-          {/* Katie Johnson Section */}
           <Box height="100vh" display="flex" alignItems="center" justifyContent="center">
             <Container maxW="container.xl">
               <MotionBox
@@ -160,10 +156,10 @@ function LandingPage() {
                   <Box>
                     <Heading as="h2" size="xl" mb={4} color="purple.500">Katie Johnson</Heading>
                     <Text fontSize="lg" mb={4} color="gray.600">
-                      With over 15 years of experience in special education, Katie Johnson is passionate about creating inclusive learning environments. She founded Academic Pathways to bridge the gap between neurodiverse students and educational institutions.
+                      With over 15 years of experience in special education Katie Johnson is passionate about creating inclusive learning environments. She founded Academic Pathways to bridge the gap between neurodiverse students and educational institutions.
                     </Text>
                     <Text fontSize="lg" color="gray.600">
-                      Katie's approach combines advocacy, education, and practical strategies to ensure every student has the opportunity to thrive academically and personally.
+                      Katies approach combines advocacy education and practical strategies to ensure every student has the opportunity to thrive academically and personally.
                     </Text>
                     <Button size="lg" mt={6} colorScheme="purple" variant="outline" rounded="full">
                       About Katie
@@ -174,7 +170,6 @@ function LandingPage() {
             </Container>
           </Box>
 
-          {/* Our Services Section */}
           <Box height="100vh" display="flex" alignItems="center" justifyContent="center">
             <Container maxW="container.xl">
               <MotionBox
