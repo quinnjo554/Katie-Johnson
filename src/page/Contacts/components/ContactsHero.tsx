@@ -29,7 +29,7 @@ function ContactsHero() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.8, rotate: -5 },
-    visible: (i:any) => ({
+    visible: (i: any) => ({
       opacity: 1,
       y: 0,
       scale: 1,
@@ -86,8 +86,10 @@ function ContactsHero() {
             animate="visible"
           >
             {[
-              { icon: <PhoneIcon />, text: "Call Me", contactInfo: "701-955-3409" },
-              { icon: <EmailIcon />, text: "Email", contactInfo: "KatieJohnson@gmail.com" },
+              { icon: <PhoneIcon />, text: "Call Me", contactInfo: "701-400-4632" },
+              {
+                icon: <EmailIcon />, text: "Email", contactInfo: "katie@academicpathways.com"
+              },
               { icon: <CalendarIcon />, text: "Hours", contactInfo: "Mon-Fri: 9am - 5pm" },
             ].map((card, index) => (
               <MotionBox key={index} variants={cardVariants} custom={index}>
@@ -115,7 +117,7 @@ function ContactsHero() {
                 Lets Work Together
               </Heading>
               <Text color="white" fontSize="lg">
-                Academic Pathways is committed to helping neurodiverse students succeed. 
+                Academic Pathways is committed to helping neurodiverse students succeed.
                 Reach out to us to learn how we can support your educational journey.
               </Text>
             </Box>
