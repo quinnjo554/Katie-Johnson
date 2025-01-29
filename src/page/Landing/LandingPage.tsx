@@ -9,6 +9,7 @@ import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { FaGraduationCap, FaChalkboardTeacher, FaBook, FaLightbulb } from "react-icons/fa";
 import Navbar from "@/components/navbar/Navbar";
 
+import { useRouter } from "next/navigation";
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 const MotionHeading = motion(Heading);
@@ -20,6 +21,7 @@ function LandingPage() {
   const { scrollY } = useViewportScroll();
   const y = useTransform(scrollY, [0, 3000], [0, -1000]); // Adjust these values as needed
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter()
 
   useEffect(() => {
     const checkMobile = () => {
@@ -43,7 +45,7 @@ function LandingPage() {
   return (
     <Box minHeight="100vh" overflow="hidden">
       <Navbar />
-      <Box 
+      <Box
         position="relative"
         height="400vh" // Adjust based on your content
       >
@@ -64,7 +66,7 @@ function LandingPage() {
             h="100%"
           />
         </MotionBox>
-       <MotionBox
+        <MotionBox
           position="fixed"
           top="400vh"
           left="0"
@@ -115,6 +117,7 @@ function LandingPage() {
                 >
                   Empowering neurodiverse students and educating school staff about dyslexia ADHD and more.
                 </MotionText>
+                {/**
                 <MotionBox
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -124,6 +127,7 @@ function LandingPage() {
                     Learn More
                   </Button>
                 </MotionBox>
+              */}
               </MotionBox>
             </Container>
           </Box>
@@ -161,7 +165,7 @@ function LandingPage() {
                     <Text fontSize="lg" color="gray.600">
                       Katies approach combines advocacy education and practical strategies to ensure every student has the opportunity to thrive academically and personally.
                     </Text>
-                    <Button size="lg" mt={6} colorScheme="purple" variant="outline" rounded="full">
+                    <Button onClick={() => { router.push("/about") }} size="lg" mt={6} colorScheme="purple" variant="outline" rounded="full">
                       About Katie
                     </Button>
                   </Box>
@@ -258,9 +262,10 @@ function LandingPage() {
                     katie@academicpathways.com
                   </Button>
                   <Text fontSize="xl" color="gray.600" mb={6}>
-                    <PhoneIcon mr={2} />(555) 123-4567
+                    <PhoneIcon mr={2} />(701) 400-4632
                   </Text>
                   <Button
+                    onClick={() => { router.push("/contact") }}
                     size="lg"
                     colorScheme="purple"
                     rounded="full"
