@@ -6,14 +6,14 @@ import {
   Heading,
   Flex,
   useMediaQuery,
-  Image,
   Container,
   VStack,
   HStack,
   Badge,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import kaiteImg from "../../../public/KatieJohnson2-Photoroom.png"
+import Image from "next/image";
+import kaiteImg from "../../../public/KatieJohnson2-Photoroom.png";
 import { useEffect } from "react";
 
 const MotionBox = motion(Box);
@@ -44,7 +44,6 @@ function AboutMe() {
           opacity="0.1"
         />
         <Container maxW="container.xl">
-
           <MotionBox
             initial="hidden"
             animate="visible"
@@ -83,15 +82,16 @@ function AboutMe() {
             gap={16}
             align="center"
           >
-            <Box flex={1}>
+            <Box flex={1} position="relative" height={{ base: "400px", lg: "500px" }}>
               <Image
-                src={kaiteImg.src}
+                src={kaiteImg}
                 alt="Katie Johnson"
-                borderRadius="2xl"
-                objectFit="cover"
-                w="full"
-                h={{ base: "400px", lg: "500px" }}
-                boxShadow="2xl"
+                fill
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "1rem",
+                }}
+                priority
               />
             </Box>
             <VStack
@@ -111,7 +111,7 @@ function AboutMe() {
                 fontSize="xl"
                 lineHeight="tall"
               >
-                As a former teacher and a parent of five children—four with diagnosed learning disabilities—I understand the challenges educators and students face. My teaching career, though short, opened my eyes to the daily struggles teachers endure to meet their students' needs.
+                As a former teacher and a parent of five children&mdash;four with diagnosed learning disabilities&mdash;I understand the challenges educators and students face. My teaching career, though short, opened my eyes to the daily struggles teachers endure to meet their students&apos; needs.
               </Text>
               <Text
                 color="gray.600"
